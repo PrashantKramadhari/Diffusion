@@ -1,0 +1,157 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // Assignment 1 - DDPM
+        {
+            "name": "Assignment 1: DDPM - Train Image Diffusion",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main/image_diffusion/train.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main"
+            }
+        },
+        {
+            "name": "Assignment 1: DDPM - 2D Plot Training",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main/2d_plot_diffusion/ddpm.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main"
+            }
+        },
+        // Assignment 5 - Synchronization
+        {
+            "name": "Assignment 5: Synchronization - Main",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "--config", "configs/ambiguous_image_config.py",
+                "--guidance_scale", "7.5",
+                "--num_inference_steps", "50"
+            ],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main"
+            }
+        },
+        {
+            "name": "Assignment 5: Synchronization - Eval",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main/eval.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main"
+            }
+        },
+        // Assignment 7 - Flow
+        {
+            "name": "Assignment 7: Flow - 2D Flow Matching",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment7-Flow-main/2d_plot_fm_todo/fm.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment7-Flow-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment7-Flow-main"
+            }
+        },
+        {
+            "name": "Assignment 7: Flow - Train Image Flow",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment7-Flow-main/image_fm_todo/train.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment7-Flow-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "--batch_size", "8",
+                "--num_epochs", "10"
+            ],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment7-Flow-main"
+            }
+        },
+        // Generic configurations for other assignments
+        {
+            "name": "Assignment 2: DDIM-CFG - Train",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment2-DDIM-CFG-main/image_diffusion_todo/train.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment2-DDIM-CFG-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment2-DDIM-CFG-main"
+            }
+        },
+        {
+            "name": "Assignment 3: ControlNet - Train",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment3-ControlNet-LoRA-master/task_1_controlnet/train.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment3-ControlNet-LoRA-master",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment3-ControlNet-LoRA-master"
+            }
+        },
+        {
+            "name": "Assignment 4: Distillation - Main",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Diffusion-Assignment4-Distillation-main/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Diffusion-Assignment4-Distillation-main",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment4-Distillation-main"
+            }
+        },
+        // Custom debug configuration - allows you to debug any file
+        {
+            "name": "Debug Current File (UV Environment)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "args": [],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${fileDirname}:${workspaceFolder}"
+            }
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "uv sync - Install Dependencies",
+            "type": "shell",
+            "command": "uv",
+            "args": ["sync"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Assignment 1: Run DDPM Training",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": ["image_diffusion/train.py"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main",
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment1-DDPM-main"
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Assignment 5: Run Synchronization",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "main.py",
+                "--config", "configs/ambiguous_image_config.py",
+                "--guidance_scale", "7.5",
+                "--num_inference_steps", "50"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main",
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment5-Synchronization-main"
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Assignment 7: Run Flow Matching",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": ["2d_plot_fm_todo/fm.py"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/Diffusion-Assignment7-Flow-main",
+                "env": {
+                    "PYTHONPATH": "${workspaceFolder}/Diffusion-Assignment7-Flow-main"
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Current File with UV Environment",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": ["${file}"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${fileDirname}",
+                "env": {
+                    "PYTHONPATH": "${fileDirname}:${workspaceFolder}"
+                }
+            },
+            "problemMatcher": []
+        }
+    ]
+}

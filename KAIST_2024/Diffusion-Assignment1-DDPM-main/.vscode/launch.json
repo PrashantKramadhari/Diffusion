@@ -1,0 +1,61 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+                {
+                "name": "Python: DDPM Diffusion models sample (uv run)",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/image_diffusion/sampling.py",
+                "args": ["--ckpt_path",
+                        "results/diffusion-ddpm-10-03-144324/last.ckpt",
+                        "--save_dir",
+                        "results/diffusion-ddpm-10-03-144324_sampled"],
+                "justMyCode": false,
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "VIRTUAL_ENV": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv",
+                    "PATH": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin:${env:PATH}"
+                },
+                "python": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin/python3"
+        },
+        {
+                "name": "Python: CFG Diffusion models sample (uv run)",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/image_diffusion/sampling.py",
+                "args": ["--ckpt_path",
+                        "results/cfg_diffusion-ddpm-10-02-091109/last.ckpt",
+                        "--save_dir",
+                        "results/cfg_diffusion-ddpm-10-02-091109_sampled",
+                        "--use_cfg"],
+                "justMyCode": false,
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "VIRTUAL_ENV": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv",
+                    "PATH": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin:${env:PATH}"
+                },
+                "python": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin/python3"
+        },
+        {
+                "name": "Python: FID Measurement (uv run)",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/image_diffusion/fid/measure_fid.py",
+                "args": ["/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/Diffusion-Assignment1-DDPM-main/image_diffusion/data/afhq/eval",
+                        "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/Diffusion-Assignment1-DDPM-main/results/diffusion-ddpm-10-03-144324_sampled"],
+                "justMyCode": false,
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "VIRTUAL_ENV": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv",
+                    "PATH": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin:${env:PATH}"
+                },
+                "python": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin/python3"
+        }
+    ]
+}

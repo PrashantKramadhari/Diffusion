@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "/media/ubuntu/winD/PK/project/Diffusion/KAIST_2024/.venv/bin/python3",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true
+}
