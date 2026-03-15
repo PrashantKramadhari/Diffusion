@@ -8,5 +8,5 @@ samples/
 .DS_Store
 
 # Solutions
-2d_plot_diffusion
-image_diffusion
+#2d_plot_diffusion
+#image_diffusion
